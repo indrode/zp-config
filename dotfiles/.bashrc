@@ -63,6 +63,13 @@ function dev {
 	git status
 }
 
+# run with param (folder name of project)
+function gg {
+  cd ~/Projects/$1
+  rake db:test:prepare
+  guard
+}
+
 # ga filename       -> git add filename
 # ga                -> git add .
 function ga {

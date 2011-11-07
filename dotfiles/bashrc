@@ -113,6 +113,7 @@ export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
+export NODE_PATH="/usr/local/lib/node_modules"
 
 #trap 'echo -ne "."' DEBUG
 

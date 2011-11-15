@@ -18,3 +18,5 @@ alias mysqladmin='/usr/local/mysql/bin/mysqladmin'
 alias rev='git log -1 | grep commit | cut -c 8-'
 alias rvm-restart='rvm_reload_flag=1 source '\''/Users/pr0xy/.rvm/scripts/rvm'\'''
 alias pid="ps x | grep -i $1"
+alias hal9000="cd /System/Library/Frameworks/ScreenSaver.framework/Resources && nohup ./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background &"
+alias exit_hal="kill `ps -ef |grep ScreenSaverEngine|grep -v grep|awk {'print $2'}`"

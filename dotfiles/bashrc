@@ -12,23 +12,20 @@ function go {
   open "/Applications/$1.app"
 }
 
-# todo list manager
+# todo list manager v2
 # lets you add to .todos or remove-all (kill)
-# is displayed on opening bash instance or 'todo show'
+# updated to loop until user enters 'quit'
 function todo {
-  if [ -z "$1" ]; then
-    echo "what? (call 'todo kill' to remove all tasks)"
+  echo "Enter TODO tasks! ('help' for available commands)"
+  while [ 1 == 1 ]; do
     read -e TODO
-    echo "echo -e '- $TODO'" >> ~/.todos
-  else
-    if [ "$1" == "kill" ]; then
-      rm ~/.todos
-      echo "echo ' '" >> ~/.todos
-      echo "tasks removed!"
-    else
-      . "$HOME/.todos"
-    fi
-  fi
+    case $TODO in
+      quit) echo "--> bye!" && break;;
+      help) echo "--> commands: help, kill, quit";;
+      kill) rm ~/.todos && echo "echo ' '" >> ~/.todos && echo "--> all tasks removed!";;
+      * ) echo "echo -e '- $TODO'" >> ~/.todos && echo "--> task added!";;
+    esac
+  done
 }
 
 # start app on localhost

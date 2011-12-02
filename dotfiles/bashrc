@@ -20,8 +20,9 @@ function todo {
   while [ 1 == 1 ]; do
     read -e TODO
     case $TODO in
+      list) . "$HOME/.todos" && echo "--> done!";;
       quit) echo "--> bye!" && break;;
-      help) echo "--> commands: help, kill, quit";;
+      help) echo "--> commands: help, kill, list, quit";;
       kill) rm ~/.todos && echo "echo ' '" >> ~/.todos && echo "--> all tasks removed!";;
       * ) echo "echo -e '- $TODO'" >> ~/.todos && echo "--> task added!";;
     esac

@@ -280,6 +280,17 @@
 				<string>#E8BF6A</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>Support</string>
+			<key>scope</key>
+			<string>support</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#988999</string>
+			</dict>
+		</dict>
 	</array>
 	<key>uuid</key>
 	<string>B80CD0D8-613C-46FD-9C06-A1201108BC2A</string>
